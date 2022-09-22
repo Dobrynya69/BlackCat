@@ -18,6 +18,9 @@
 	border: 4px solid rgba(255, 255, 255, 1);
 	transition: 300ms;
 }
+body{
+    overflow-x: hidden;
+}
 body.active_scroll{
     overflow: hidden;
 }
@@ -70,17 +73,19 @@ header{
     align-items: flex-end;
     justify-content: flex-start;
     flex-direction: column;
+    background-color: black;
 }
 .full-screen img{
     position: absolute;
-    z-index: -1;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 80px);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
     object-fit: cover;
 }
 .full-screen__text{
+    z-index: 2;
     font-size: calc(30px + (40 + 40 * 0.7) * ((100vw - 320px) / 1280));
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
@@ -96,6 +101,7 @@ header{
     text-transform: uppercase;
 }
 .full-screen__button{
+    z-index: 2;
     margin-top: 110px;
     padding: 10px 0;
     padding-left: 31px;
@@ -129,6 +135,7 @@ header{
     background-color: black;
 }
 .send-form__pop-up{
+    z-index: 11;
     position: fixed;
     top: -100%;
     left: 50%;
