@@ -18,9 +18,6 @@
 	border: 4px solid rgba(255, 255, 255, 1);
 	transition: 300ms;
 }
-body{
-    overflow-x: hidden;
-}
 body.active_scroll{
     overflow: hidden;
 }
@@ -82,6 +79,8 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
+    max-width: 1280px;
+    width: 100%;
     object-fit: cover;
 }
 .full-screen__text{
@@ -383,6 +382,9 @@ header{
     position: absolute;
     top: 8px;
     right: 8px;
+}
+.close:hover{
+    cursor: pointer;
 }
 @media (max-width: 1000px){
     .block__body{
