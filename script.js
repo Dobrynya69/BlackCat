@@ -5,7 +5,7 @@ scrollLinks.forEach(scrollLink => {
         document.querySelector('.header__menu-icon').classList.remove('active')
         document.querySelector('.header__menu').classList.remove('active')
         const block = document.getElementById(e.target.dataset.to)
-        block.scrollIntoView({behavior: "smooth"})
+        block.scrollIntoView({behavior: "smooth", block: "center"})
     })
 })
 
