@@ -283,18 +283,28 @@ header{
 }
 .text ul{
     margin-left: 20px;
+    list-style: none;
 }
 .text ul li{
+    display: flex;
+    align-items: center;
     color: black;
     font-size: 16px;
     font-weight: 400;
-    padding: 3px;
+    margin: -25px;
 }
 .text{
     color: black;
     font-size: 16px;
-    font-weight: 400;
-    margin-left: 5px;
+    font-weight: 400; 
+}
+.text.list{
+    margin-left: 10px;
+}
+.dot{
+    font-size: 40px;
+    margin-right: 5px;
+    color: black;
 }
 .block__body-slider{
     padding: 0 24px 80px 24px;
