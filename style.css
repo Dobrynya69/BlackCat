@@ -300,6 +300,7 @@ header{
     padding: 0 24px 80px 24px;
     display: flex;
     flex-direction: column;
+    max-width: calc(1280px - 48px);
     width: calc(100% - 48px);
 }
 .slider{
