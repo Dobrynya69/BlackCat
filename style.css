@@ -401,6 +401,30 @@ header{
 .close:hover{
     cursor: pointer;
 }
+.block__body.links{
+    align-items: flex-start;
+}
+.block__links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.block__form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact_link{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 12.5px 0;
+}
+.contact_link svg{
+    margin-right: 15px;
+}
 @media (max-width: 1130px){
     .full-screen__text{
         font-size: 40px;
@@ -488,6 +512,12 @@ header{
 @media (max-width: 1000px){
     .block__body{
         flex-direction: column;
+    }
+    .block__form{
+        width: 100%;
+    }
+    .block__links{
+        width: 100%;
     }
 }
 @media (max-width: 584px){
