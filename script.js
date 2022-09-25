@@ -33,22 +33,24 @@ if (contactButtons) {
 const slides = document.querySelectorAll('.slide-img')
 slides.forEach(slide => {
     slide.addEventListener('click', function (e) {
-        document.body.classList.add('active_scroll')
-        const bigImgs = document.querySelectorAll('.slide__big-img')
-        bigImgs.forEach(bigImg => {
-            if (bigImg.classList.contains(e.target.classList[1])) {  
-                if (bigImg.classList.contains("active")) {
-                    document.body.classList.remove('active_scroll')
-                    bigImg.classList.remove("active")
+        if (window.innerWidth > 585) {
+            document.body.classList.add('active_scroll')
+            const bigImgs = document.querySelectorAll('.slide__big-img')
+            bigImgs.forEach(bigImg => {
+                if (bigImg.classList.contains(e.target.classList[1])) {  
+                    if (bigImg.classList.contains("active")) {
+                        document.body.classList.remove('active_scroll')
+                        bigImg.classList.remove("active")
+                    }
+                    else{
+                        bigImgs.forEach(toRemove => {
+                            toRemove.classList.remove("active")
+                        })
+                        bigImg.classList.add("active")
+                    }
                 }
-                else{
-                    bigImgs.forEach(toRemove => {
-                        toRemove.classList.remove("active")
-                    })
-                    bigImg.classList.add("active")
-                }
-            }
-        })
+            })
+        }
     })
 })
 const closes = document.querySelectorAll('.close')
